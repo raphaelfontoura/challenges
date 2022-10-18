@@ -19,7 +19,7 @@ public class StringSplitTest {
   }
 
   @Test
-  void shouldReturnSize21AndEachWord() {
+  public void shouldReturnSize21AndEachWord() {
     String s = "Hello, thanks for attempting this problem! Hope it will help you to learn java! Good luck and have a nice day!";
     String[] expected = {
         "Hello",
@@ -52,7 +52,7 @@ public class StringSplitTest {
   }
 
   @Test
-  void shouldReturnSize0AndEmptyArray() {
+  public void shouldReturnSize0AndEmptyArray() {
     String s = "                        ";
     String[] expected = {};
 
