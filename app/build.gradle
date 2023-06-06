@@ -27,7 +27,7 @@ application {
     mainClass = 'MaximumCostLaptopCount.App'
 }
 
-tasks.named('test') {
+tasks.test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }

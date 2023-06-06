@@ -1,9 +1,7 @@
 package group_anagrams;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Array;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
