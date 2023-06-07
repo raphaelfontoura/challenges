@@ -4,22 +4,27 @@ import java.util.*;
 
 public class MinStack {
     private Stack<Integer> stack;
-    private PriorityQueue<Integer> min;
-
+    private Stack<Integer> minStack;
 
     public MinStack() {
         stack = new Stack<>();
-        min = new PriorityQueue<>();
+        minStack = new Stack<>();
     }
 
     public void push(int val) {
         stack.push(val);
-        min.add(val);
+
+        if (minStack.isEmpty() || val <= minStack.peek()) {
+            minStack.push(val);
+        }
     }
 
     public void pop() {
-        var popNum = stack.pop();
-        min.remove(popNum);
+        int popped = stack.pop();
+
+        if (popped == minStack.peek()) {
+            minStack.pop();
+        }
     }
 
     public int top() {
@@ -27,13 +32,16 @@ public class MinStack {
     }
 
     public int getMin() {
-        return min.peek();
+        return minStack.peek();
     }
 
     public static void main(String[] args) {
-        var teste = new MinStack();
 
+        System.out.println("Case 1");
+        var teste = new MinStack();
         case1(teste);
+        System.out.println("Case 2");
+        teste = new MinStack();
         case2(teste);
 
     }
